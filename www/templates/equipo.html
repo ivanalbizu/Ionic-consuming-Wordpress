@@ -1,0 +1,54 @@
+<ion-view title="Equipo" id="page2" class=" ">
+  <ion-content padding="true" class="has-header">
+    <div ng-repeat="team in vm.teams" class="list card animated-item" id="equipo-card26">
+      <ion-item ui-sref="menu.equipo-detalle({teamId: team.id})" class="item-avatar item-icon-right" id="equipo-list-item30">
+        <img src="{{team.url_team_thumbnail.ionic_team}}">
+        <h2>{{team.title.rendered}}</h2>
+        <p>{{team.fields.position_team}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+      <div class="item item-body " id="equipo-list-item-container3">
+        <p ng-bind-html="team.excerpt.rendered" id="equipo-markdown4" style="margin-top:0px;color:#000000;" class=" ">
+        <div>
+          <div class="row">
+            <div ng-show="team.fields.facebook_link.length !== 0" class="col">
+              <a href="#" ng-click="window.open('{{team.fields.facebook_link}}', '_system');">
+                <i class="icon ion-social-facebook"></i>
+              </a>
+            </div>
+            <div ng-show="team.fields.twitter_link.length !== 0" class="col">
+              <a href="#" ng-click="window.open('{{team.fields.twitter_link}}', '_system');">
+                <i class="icon ion-social-twitter"></i>
+              </a>
+            </div>
+            <div ng-show="team.fields.gplus_link.length !== 0" class="col">
+              <a href="#" ng-click="window.open('{{team.fields.gplus_link}}', '_system');">
+                <i class="icon ion-social-googleplus-outline"></i>
+              </a>
+            </div>
+            <div ng-show="team.fields.youtube_link.length !== 0" class="col">
+              <a href="#" ng-click="window.open('{{team.fields.youtube_link}}', '_system');">
+                <i class="icon ion-social-youtube"></i>
+              </a>
+            </div>
+            <div ng-show="team.fields.instagram_link.length !== 0" class="col">
+              <a href="#" ng-click="window.open('{{team.fields.instagram_link}}', '_system');">
+                <i class="icon ion-social-instagram"></i>
+              </a>
+            </div>
+            <div ng-show="team.fields.pinterest_link.length !== 0" class="col">
+              <a href="#" ng-click="window.open('{{team.fields.pinterest_link}}', '_system');">
+                <i class="icon ion-social-pinterest"></i>
+              </a>
+            </div>
+            <div ng-show="team.fields.linkedin_link.length !== 0" class="col">
+              <a href="#" ng-click="window.open('{{team.fields.linkedin_link}}', '_system');">
+                <i class="icon ion-social-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

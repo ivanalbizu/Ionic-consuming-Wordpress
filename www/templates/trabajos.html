@@ -1,0 +1,28 @@
+<ion-view title="Trabajos" id="page6" class=" ">
+  <ion-content padding="true" class="has-header">
+    <form id="trabajos-form8" class="list ">
+      <label class="item item-input" name="filter-category-name">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" ng-model="search" placeholder="Filtro">
+      </label>
+    </form>
+    <div ng-repeat="work in vm.works | filter:search" class="list card animated-item" id="trabajos-card213">
+      <ion-item ui-sref="menu.trabajo-detalle({workId: work.id})" class="item-thumbnail-left item-icon-right item-work" id="trabajos-list-item38">
+        <img src="{{work.url_work_thumbnail.ionic_work}}">
+        <h2>{{work.title.rendered}}</h2>
+        <p style="white-space:normal;">{{work.name_categories}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+      <div class="item item-body " id="trabajos-list-item-container8">
+        <p ng-bind-html="work.excerpt.rendered" id="trabajos-markdown8" style="margin-top:0px;color:#000000;" class=" ">
+        <div>
+          <div class="row">
+            <div class="col" ng-repeat="src in work.url_work_gallery">
+              <img width="100%" src="{{src}}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+<ion-view title="Servicios" id="page4" class=" ">
+  <ion-content padding="true" class="has-header">
+    <div ng-repeat="service in vm.services" class="list card animated-item" id="servicios-card211">
+      <ion-item class="" id="servicios-list-item36">
+        <h2><i class="fa fa-{{service.fields.icon_service}}"></i>  {{service.title.rendered}}</h2>
+      </ion-item>
+      <div class="item item-body" id="servicios-list-item-container6">
+        <div ng-bind-html="service.content.rendered" id="servicios-markdown6" style="margin-top:0px;color:#000000;"></div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

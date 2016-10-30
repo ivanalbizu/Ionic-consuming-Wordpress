@@ -1,0 +1,14 @@
+<ion-view title="Clientes" id="page3" class=" ">
+  <ion-content padding="true" class="has-header">
+    <div ng-repeat="client in vm.clients" class="list card animated-item" id="clientes-card29">
+      <ion-item id="clientes-list-item33" class=" ">{{client.title.rendered}}</ion-item>
+      <div ng-show="client.fields.client_image.url.length !== 0" style="margin: 0px; line-height: 150px; text-align: center; background-color: rgb(10, 10, 10);">
+        <img src="{{client.fields.client_image.url}}" alt="{{client.fields.client_image.alt}}" />
+      </div>
+      <ion-item ng-show="client.fields.client_name_testimonial.length !== 0" class="">
+        <h2>{{client.fields.client_name_testimonial}} | {{client.fields.client_position_testimonial}}</h2>
+        <p ng-bind-html="client.fields.client_text_testimonial"></p>
+      </ion-item>
+    </div>
+  </ion-content>
+</ion-view>
